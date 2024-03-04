@@ -5,8 +5,8 @@ model:
   end_sym: "</s>"
   low_resource: False
   prompt_template: '[INST] {} [/INST]'
-  llama_model: "/home/czb/project/ECAC-cause/checkpoints/Llama-2-7b-chat-hf"
-  ckpt: "/home/czb/project/ECAC-cause/checkpoints/save_checkpoint/20240127190_ECAC-cause/checkpoint_6.pth"
+  llama_model: "/home/user/project/MER-MCE/checkpoints/Llama-2-7b-chat-hf"
+  ckpt: "/home/user/project/MER-MCE/checkpoints/save_checkpoint/20240127190_ECAC-cause/checkpoint_6.pth"
   lora_r: 64
   lora_alpha: 16
 
@@ -25,15 +25,15 @@ datasets:
 
 evaluation_datasets:
   ECAC_emotion_caption:
-    # eval_file_path: /home/czb/selected_face/ECAC/test_window12.json # ECAC emotion
-    # eval_file_path: /home/czb/selected_face/ECAC/cause_test_window12_none.json # ECAV cause: test
+    # eval_file_path: /home/user/selected_face/ECAC/test_window12.json # ECAC emotion
+    # eval_file_path: /home/user/selected_face/ECAC/cause_test_window12_none.json # ECAV cause: test
     eval_file_path: results/submit_now-n_w-e.json # ECAV cause: submit
 
-    img_path: /home/czb/selected_face/ECAC/videos    
+    img_path: /home/user/selected_face/ECAC/videos    
     max_new_tokens: 20
     batch_size: 20
 
 run:
   task: image_text_pretrain
   name: minigptv2_evaluation
-  save_path: /home/czb/project/ECAC-cause/results
+  save_path: /home/user/project/MER-MCE/results

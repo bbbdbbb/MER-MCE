@@ -4,8 +4,8 @@ model:
   max_txt_len: 1024
   image_size: 448
   end_sym: "</s>"
-  llama_model: "/home/czb/project/ECAC-cause/checkpoints/Llama-2-7b-chat-hf"
-  ckpt: "/home/czb/project/ECAC-cause/checkpoints/minigptv2_checkpoint.pth"
+  llama_model: "/home/user/project/MER-MCE/checkpoints/Llama-2-7b-chat-hf"
+  ckpt: "/home/user/project/MER-MCE/checkpoints/minigptv2_checkpoint.pth"
   use_grad_checkpoint: True
   chat_template: True
   lora_r: 64
@@ -40,7 +40,7 @@ run:
   iters_per_epoch: 5000
 
   seed: 42
-  output_dir: "/home/czb/project/ECAC-cause/checkpoints/save_checkpoint"
+  output_dir: "/home/user/project/MER-MCE/checkpoints/save_checkpoint"
 
   amp: True
   resume_ckpt_path: null
