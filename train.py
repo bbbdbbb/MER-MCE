@@ -31,9 +31,6 @@ from minigpt4.processors import *
 from minigpt4.runners import *
 from minigpt4.tasks import *
 
-# os.environ["WANDB_API_KEY"] = '59674d56aa8cfb7319d37e14f69199ed8e1e48fc' 
-# os.environ["WANDB_MODE"] = "offline" 
-
 def parse_args():
     parser = argparse.ArgumentParser(description="Training")
 
@@ -103,8 +100,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # Use an existing W&B account
-    # 59674d56aa8cfb7319d37e14f69199ed8e1e48fc
     # CUDA_VISIBLE_DEVICES=1,2,3 torchrun --nproc-per-node 3 train.py --cfg-path train_configs/minigptv2_finetune_exp.yaml
     # CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc-per-node 2 train.py --cfg-path train_configs/minigptv2_finetune_emotion.yaml
 
